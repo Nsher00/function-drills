@@ -168,7 +168,7 @@ let faveColorFinder=(color)=>{
   let colorRating = color.toLowerCase() === 'red'? `${color} is a great color!`
   :color.toLowerCase() === 'green'? `${color} is a solid favorite color!`
   :color.toLowerCase() === 'black'? `so trendy.`
-  : 'You gotta reevaluate your favorite color choice'
+  : 'You need evaluate your favorite color choice'
   console.log(colorRating);
 }
 faveColorFinder('blue')
@@ -181,8 +181,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
-
+let printAllNames =(arr)=>{
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+  }
+}
+printAllNames(namesArr)
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
@@ -192,8 +196,11 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
-
+let thatsOdd =(num)=>{
+  let numOdd = num % 2 === 0 ? "That's not odd!" : 'That is odd indeed!'
+  console.log(numOdd);
+}
+thatsOdd(9)
 ////////////////// PROBLEM 14 ////////////////////
 
 /*
@@ -205,8 +212,8 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
-
+let bestMovie =(movie)=>console.log(`${movie} is the best movie ever!`);
+bestMovie('Amadeus')
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 /* 
@@ -219,8 +226,19 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
-
-
+let bigOrSmall = (arr)=>{
+  for (let i = 0; i < arr.length; i++) {
+    let answers = [];
+    if (arr[i] > 100) {
+      answers.push("BIG")
+    }else{
+      answers.push("small")
+    }
+  let arrayEvaluator = answers;
+  console.log(arrayEvaluator);
+  }
+}
+bigOrSmall(bigOrSmallArray)
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
@@ -230,7 +248,15 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
-
+let theEliminator =(arr,person)=>{
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === person) {
+      arr.splice(i,1);
+    }
+  }
+  console.log(arr);
+}
+theEliminator(contestants,loser);
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -240,8 +266,10 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
-
+let shout =(str)=>{
+  console.log(str.toUpperCase());
+}
+shout(sampleString)
 ////////////////// PROBLEM 18 ////////////////////
 /*
   Write a function called emailCheck that takes in
@@ -253,6 +281,14 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+let emailCheck =(email)=>{
+  if(email.trim().includes('@') === true){
+    console.log('email verified');
+  }else{
+    console.log('must provide valid email address.');
+  }
+}
+emailCheck('hellos@gmail.com')
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -260,7 +296,9 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
+let goldenFrogs =(gold)=>{
+  let totalFrogs = gold / 3
+}
 
 ////////////////// PROBLEM 20 ////////////////////
 /*
@@ -268,8 +306,12 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
-
+let goldenFrogs2 =(gold)=>{
+  let totalFrogs2 = gold / 3
+  totalFrogs2 = Math.floor(totalFrogs2)
+  console.log(totalFrogs2);
+}
+goldenFrogs2(4)
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 /*
@@ -277,7 +319,7 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
-
+let 
 
 ////////////////// PROBLEM 22 ////////////////////
 
